@@ -185,13 +185,12 @@ function mostrarProducCar() {
         `
         contenedorCar.innerHTML = carroHTML
         localStorage.setItem("carrito", JSON.stringify(carrito))
+        let borrarMem=document.getElementById("pagar")
+        console.log(borrarMem)
+        borrarMem.addEventListener("click", () => {    
+            alert("Su compra se realizo con exito")
+            localStorage.clear()
+            location.reload()
+        })
     }
 } 
-
-let borrarMem=document.getElementById("pagar")
-console.log(borrarMem)
-// borrarMem.addEventListener("click", () => {    
-//     alert("Su compra se realizo con exito")
-//     localStorage.clear()
-// })
-
